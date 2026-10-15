@@ -1,0 +1,56 @@
+{
+  "search": {
+    "org": "your-source-organization-id",
+    "apiKey": "your-search-api-key",
+    "platform": "https://platform-au.cloud.coveo.com",
+    "numberOfResults": 1000,
+    "sources": {
+      "products": {
+        "query": "@objecttype==product",
+        "pipeline": ""
+      },
+      "availability": {
+        "query": "@objecttype==availability",
+        "pipeline": ""
+      }
+    }
+  },
+  "stream": {
+    "platform": "https://api-au.cloud.coveo.com",
+    "apiKey": "your-stream-api-key",
+    "org": "your-destination-organization-id",
+    "batchSize": 500,
+    "maxRetries": 10,
+    "retryAfter": 5000,
+    "sources": {
+      "products": {
+        "sourceId": "your-destination-product-source-id"
+      },
+      "availability": {
+        "sourceId": "your-destination-availability-source-id"
+      }
+    }
+  },
+  "transform": {
+    "products": {
+      "fieldMapping": {},
+      "excludeFields": [],
+      "includeAllFields": true,
+      "documentIdField": "documentId",
+      "titleField": "title",
+      "staticFields": {
+        "objecttype": "product"
+      }
+    },
+    "availability": {
+      "fieldMapping": {},
+      "excludeFields": [],
+      "includeAllFields": true,
+      "documentIdField": "documentId",
+      "titleField": "title",
+      "staticFields": {
+        "objecttype": "availability"
+      }
+    }
+  }
+}

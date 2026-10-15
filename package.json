@@ -1,0 +1,31 @@
+{
+  "name": "catalog-source-copy",
+  "version": "1.0.0",
+  "description": "Copy documents from a Coveo catalog source in one org to a catalog source in another org via the Stream API",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "search": "tsx src/index.ts --search-only",
+    "stream": "tsx src/index.ts --stream-only",
+    "dry-run": "tsx src/index.ts --dry-run",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "coveo",
+    "catalog",
+    "stream-api",
+    "migration",
+    "indexer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coveo-pushapi-cli": "^1.1.0"
+  }
+}

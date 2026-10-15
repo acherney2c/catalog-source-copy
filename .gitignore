@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Credentials — never commit real API keys / org IDs
+.config.json
+
+# Exported catalog data (large, environment-specific)
+export_output/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
